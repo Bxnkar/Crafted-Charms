@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel — Crafted Charms</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<div class="admin-layout">
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="admin-sidebar">
+    <div class="admin-logo">
+      Crafted Charms
+      <span>Admin Panel</span>
+    </div>
+    <nav class="admin-nav">
+      <div class="admin-nav-item active" data-section="dashboard" id="nav-dashboard">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </div>
+      <div class="admin-nav-item" data-section="products" id="nav-products">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        Products
+      </div>
+      <div class="admin-nav-item" data-section="orders" id="nav-orders">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="2"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>
+        Orders
+      </div>
+      <div class="admin-nav-item" data-section="users" id="nav-users">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        Users
+      </div>
+    </nav>
+    <div style="padding: 20px 24px; border-top: 1px solid rgba(255,255,255,0.08);">
+      <a href="../../index.html" style="font-size:0.8rem; color:rgba(255,255,255,0.4); display:flex; align-items:center; gap:8px; transition:color .3s;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="15 18 9 12 15 6"/></svg>
+        Back to site
+      </a>
+    </div>
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="admin-main">
+
+    <!-- DASHBOARD -->
+    <section id="section-dashboard">
+      <div class="admin-topbar">
+        <div>
+          <h1 class="admin-page-title">Dashboard</h1>
+          <p class="admin-page-sub">Overview of your store</p>
+        </div>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <p class="stat-label">Total Products</p>
+          <p class="stat-value" id="stat-products">3</p>
+          <p class="stat-trend">↑ Active listings</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-label">Total Orders</p>
+          <p class="stat-value" id="stat-orders">12</p>
+          <p class="stat-trend">↑ This month</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-label">Registered Users</p>
+          <p class="stat-value" id="stat-users">8</p>
+          <p class="stat-trend">↑ Growing</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-label">Revenue</p>
+          <p class="stat-value" id="stat-revenue">₹52,400</p>
+          <p class="stat-trend">↑ All time</p>
+        </div>
+      </div>
+      <!-- Recent orders mini-table -->
+      <div class="admin-table-wrap">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Customer</th>
+              <th>Product</th>
+              <th>Amount</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>#CC1012</td><td>Aanya Sharma</td><td>Aurelia Charm</td><td>₹4,200</td><td><span class="badge badge-active">Delivered</span></td></tr>
+            <tr><td>#CC1011</td><td>Rohan Mehta</td><td>Terra Cuff</td><td>₹3,860</td><td><span class="badge badge-pending">Shipped</span></td></tr>
+            <tr><td>#CC1010</td><td>Priya Nair</td><td>Solstice Strand</td><td>₹2,500</td><td><span class="badge badge-active">Delivered</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="section-products" style="display:none;">
+      <div class="admin-topbar">
+        <div>
+          <h1 class="admin-page-title">Products</h1>
+          <p class="admin-page-sub">Manage your jewelry catalog</p>
+        </div>
+        <button class="btn-admin-add" id="add-product-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Add Product
+        </button>
+      </div>
+      <div class="admin-table-wrap">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Tag</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="products-tbody">
+            <!-- Rendered by JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ORDERS -->
+    <section id="section-orders" style="display:none;">
+      <div class="admin-topbar">
+        <div>
+          <h1 class="admin-page-title">Orders</h1>
+          <p class="admin-page-sub">Track and manage customer orders</p>
+        </div>
+      </div>
+      <div class="admin-table-wrap">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Customer</th>
+              <th>Email</th>
+              <th>Product</th>
+              <th>Amount</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="orders-tbody">
+            <!-- Rendered by JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- USERS -->
+    <section id="section-users" style="display:none;">
+      <div class="admin-topbar">
+        <div>
+          <h1 class="admin-page-title">Users</h1>
+          <p class="admin-page-sub">Registered customer accounts</p>
+        </div>
+        <button class="btn-admin-add" id="add-user-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Add User
+        </button>
+      </div>
+      <div class="admin-table-wrap">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Role</th>
+              <th>Joined</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="users-tbody">
+            <!-- Rendered by JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- ===== PRODUCT MODAL ===== -->
+<div class="modal-overlay" id="product-modal">
+  <div class="modal">
+    <div class="modal-header">
+      <h2 class="modal-title" id="product-modal-title">Add Product</h2>
+      <button class="modal-close" id="product-modal-close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <form id="product-form">
+      <div class="form-group">
+        <label for="p-name">Product Name</label>
+        <input type="text" id="p-name" placeholder="e.g. Aurelia Charm" />
+      </div>
+      <div class="form-group">
+        <label for="p-desc">Description</label>
+        <input type="text" id="p-desc" placeholder="Short description" />
+      </div>
+      <div class="form-group">
+        <label for="p-price">Price (₹)</label>
+        <input type="number" id="p-price" placeholder="4200" min="0" />
+      </div>
+      <div class="form-group">
+        <label for="p-tag">Badge Label (optional)</label>
+        <input type="text" id="p-tag" placeholder="e.g. Bestseller" />
+      </div>
+      <div class="form-group">
+        <label>Product Image</label>
+        <label class="img-upload-zone" id="img-upload-label" for="p-img-file">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0018 9h-1.26A8 8 0 103 16.3"/></svg>
+          <span style="margin-top:8px; display:block;">Click to upload image</span>
+          <span style="font-size:0.72rem; opacity:0.7;">PNG, JPG, WebP — admin uploads product photos here</span>
+          <input type="file" id="p-img-file" accept="image/*" />
+        </label>
+        <img class="img-upload-preview" id="p-img-preview" alt="Preview" />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-modal-cancel" id="product-modal-cancel">Cancel</button>
+        <button type="submit" class="btn-modal-save" id="product-modal-save">Save Product</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ===== USER MODAL ===== -->
+<div class="modal-overlay" id="user-modal">
+  <div class="modal">
+    <div class="modal-header">
+      <h2 class="modal-title" id="user-modal-title">Add User</h2>
+      <button class="modal-close" id="user-modal-close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <form id="user-form">
+      <div class="form-group">
+        <label for="u-name">Full Name</label>
+        <input type="text" id="u-name" placeholder="Aanya Sharma" />
+      </div>
+      <div class="form-group">
+        <label for="u-email">Email</label>
+        <input type="email" id="u-email" placeholder="user@example.com" />
+      </div>
+      <div class="form-group">
+        <label for="u-role">Role</label>
+        <input type="text" id="u-role" placeholder="customer" />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-modal-cancel" id="user-modal-cancel">Cancel</button>
+        <button type="submit" class="btn-modal-save">Save User</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div id="toast-container"></div>
+<script src="../js/api.js"></script>
+<script src="../js/admin.js"></script>
+</body>
+</html>

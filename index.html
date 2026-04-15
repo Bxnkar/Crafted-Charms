@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crafted Charms — Handmade Jewelry from Mumbai</title>
+  <meta name="description" content="Crafted Charms is a Mumbai-based handmade jewelry brand. Intentionally designed, hand-curated pieces that bridge the gap between soulful craftsmanship and timeless elegance." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="frontend/css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">crafted charms</a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#shop">Shop</a>
+        <a href="#custom">Custom</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="frontend/pages/auth.html" class="nav-account" id="nav-account-btn" aria-label="Sign in">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+          <span class="nav-account-label">Sign In</span>
+        </a>
+        <button class="nav-bag" id="nav-bag-btn" aria-label="Shopping bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span class="nav-bag-count" id="nav-bag-count">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <p class="hero-tag">Mumbai · Est. 2021</p>
+        <h1 class="hero-heading">Wear your story<br/><em>on your wrist</em></h1>
+        <p class="hero-sub">Intentionally designed, hand-curated pieces that bridge the gap between soulful craftsmanship and timeless elegance.</p>
+        <div class="hero-actions">
+          <a href="#shop" class="btn btn-primary" id="shop-now-btn">Shop Now</a>
+          <a href="#custom" class="btn btn-outline" id="custom-order-btn">Custom Order</a>
+        </div>
+      </div>
+      <div class="hero-image-wrap">
+        <div class="hero-image-card">
+          <!-- Image placeholder: admin uploads bracelet_hero image here -->
+          <div class="img-placeholder">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            Hero image
+          </div>
+          <div class="hero-badge">
+            <span class="hero-badge-text">Handcrafted<br/>with ♥</span>
+          </div>
+        </div>
+        <div class="hero-floater">
+          <span>✦</span> New arrivals weekly
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll to explore</span>
+      <svg width="14" height="20" viewBox="0 0 14 20" fill="none">
+        <rect x="1" y="1" width="12" height="18" rx="6" stroke="#C47B5A" stroke-width="1.5"/>
+        <circle cx="7" cy="6" r="2" fill="#C47B5A" class="scroll-dot"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED ARTIFACTS ===== -->
+  <section class="featured" id="shop">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <p class="section-label">The Curated Collection</p>
+          <h2 class="section-title">Featured Artifacts</h2>
+        </div>
+        <a href="#" class="view-all" id="view-all-link">View All Products →</a>
+      </div>
+
+      <div class="products-grid">
+        <!-- Product 1 -->
+        <article class="product-card" id="product-aurelia" data-reveal>
+          <div class="product-img-wrap">
+            <!-- Image placeholder: admin uploads product_charm image here -->
+            <div class="img-placeholder">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+                <polyline points="21 15 16 10 5 21"/>
+              </svg>
+              Product image
+            </div>
+            <span class="product-tag">Bestseller</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Aurelia Charm</h3>
+            <p class="product-desc">Hand-hammered gold link with a single moonstone centre.</p>
+            <div class="product-footer">
+              <span class="product-price">₹4,200</span>
+              <button class="btn-add" id="add-aurelia" data-name="Aurelia Charm" data-price="4200">Add to bag</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="product-card" id="product-terra" data-reveal>
+          <div class="product-img-wrap">
+            <!-- Image placeholder: admin uploads product_cuff image here -->
+            <div class="img-placeholder">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+                <polyline points="21 15 16 10 5 21"/>
+              </svg>
+              Product image
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Terra Cuff</h3>
+            <p class="product-desc">Adjustable raw copper cuff inspired by desert horizons.</p>
+            <div class="product-footer">
+              <span class="product-price">₹3,860</span>
+              <button class="btn-add" id="add-terra" data-name="Terra Cuff" data-price="3860">Add to bag</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 3 -->
+        <article class="product-card" id="product-solstice" data-reveal>
+          <div class="product-img-wrap">
+            <!-- Image placeholder: admin uploads product_strand image here -->
+            <div class="img-placeholder">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+                <polyline points="21 15 16 10 5 21"/>
+              </svg>
+              Product image
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Solstice Strand</h3>
+            <p class="product-desc">Fine silk thread delicately woven with 18k gold vermeil.</p>
+            <div class="product-footer">
+              <span class="product-price">₹2,500</span>
+              <button class="btn-add" id="add-solstice" data-name="Solstice Strand" data-price="2500">Add to bag</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CUSTOM ORDERS CTA ===== -->
+  <section class="custom-cta" id="custom">
+    <div class="cta-inner">
+      <div class="cta-text">
+        <h2 class="cta-heading">Custom orders open</h2>
+        <p class="cta-sub">Bring your specifications to life. Limited slots available monthly.</p>
+      </div>
+      <a href="#contact" class="btn btn-cta" id="dm-to-order-btn">DM to Order</a>
+    </div>
+    <div class="cta-orb cta-orb-1"></div>
+    <div class="cta-orb cta-orb-2"></div>
+  </section>
+
+  <!-- ===== OUR ETHOS ===== -->
+  <section class="ethos" id="about">
+    <div class="ethos-inner">
+      <div class="ethos-text" data-reveal>
+        <p class="section-label">Our Ethos</p>
+        <h2 class="ethos-heading">Consciously sourced,<br/><em>patiently made.</em></h2>
+        <p class="ethos-body">We believe in the beauty of imperfection. Each charm is cast using recycled metals and ethically sourced stones, ensuring your jewelry is as rare as it is beautiful.</p>
+        <ul class="ethos-list">
+          <li><span class="ethos-icon">✦</span><span>100% recycled metals</span></li>
+          <li><span class="ethos-icon">✦</span><span>Ethically sourced gemstones</span></li>
+          <li><span class="ethos-icon">✦</span><span>Made in Mumbai, with love</span></li>
+        </ul>
+      </div>
+      <div class="ethos-image-wrap" data-reveal>
+        <!-- Image placeholder: admin uploads workbench_ethos image here -->
+        <div class="img-placeholder" style="height:100%; border-radius: inherit;">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21 15 16 10 5 21"/>
+          </svg>
+          Studio image
+        </div>
+        <div class="ethos-img-label">Our Mumbai Studio</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CART DRAWER ===== -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-hidden="true">
+    <div class="cart-header">
+      <h2 class="cart-title">Your Bag</h2>
+      <button class="cart-close" id="cart-close-btn" aria-label="Close cart">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="cart-body" id="cart-body">
+      <!-- Dynamic cart items go here -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <span class="cart-subtotal-price" id="cart-subtotal-price">₹0</span>
+      </div>
+      <p class="cart-taxes">Taxes and shipping calculated at checkout.</p>
+      <button class="btn btn-primary cart-checkout" id="cart-checkout-btn">Checkout</button>
+    </div>
+  </aside>
+
+  <!-- ===== TOAST ===== -->
+  <div id="toast-container"></div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="contact">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p class="footer-logo">Crafted Charms</p>
+        <p class="footer-copy">© 2024 Crafted Charms. Conceived with care and ethics.</p>
+      </div>
+      <div class="footer-socials">
+        <a href="#" class="footer-social-link" id="footer-instagram">Instagram</a>
+        <a href="#" class="footer-social-link" id="footer-whatsapp">WhatsApp</a>
+        <a href="#" class="footer-social-link" id="footer-pinterest">Pinterest</a>
+      </div>
+      <div class="footer-nav">
+        <a href="#shop" class="footer-link">Shop</a>
+        <a href="#custom" class="footer-link">Custom</a>
+        <a href="#" class="footer-link">Shipping</a>
+        <a href="#" class="footer-link">Returns</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="frontend/js/api.js"></script>
+  <script src="frontend/js/script.js"></script>
+</body>
+</html>

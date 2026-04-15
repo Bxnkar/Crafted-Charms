@@ -1,0 +1,14 @@
+# ============================================================
+#  Crafted Charms — Database Configuration Template
+#  Copy this file to config.properties and fill your values.
+# ============================================================
+
+# MySQL connection
+# Production note: prefer useSSL=true with proper certificates.
+db.url=jdbc:mysql://localhost:3306/crafted_charms?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+
+# MySQL username
+db.user=your_mysql_user
+
+# MySQL password
+db.password=your_mysql_password

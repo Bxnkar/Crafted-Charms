@@ -10,7 +10,11 @@
 # Create DB and tables
 mysql -u root -p < ../sql/schema.sql
 
+<<<<<<< Updated upstream
 # Seed demo data
+=======
+# Seed/reset empty database state
+>>>>>>> Stashed changes
 mysql -u root -p crafted_charms < ../sql/sample_data.sql
 ```
 
@@ -23,7 +27,11 @@ Option A (recommended): environment variables
 ```bash
 export DB_URL="jdbc:mysql://localhost:3306/crafted_charms?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true"
 export DB_USER="your_mysql_user"
+<<<<<<< Updated upstream
 export DB_PASSWORD="your_mysql_password"
+=======
+export DB_PASSWORD="<your_database_secret>"
+>>>>>>> Stashed changes
 ```
 
 Option B: local config file
@@ -53,12 +61,16 @@ mvn test
 
 ## Demo Login Credentials
 
+<<<<<<< Updated upstream
 | Role     | Username | Password   |
 |----------|----------|------------|
 | Admin    | admin    | admin123   |
 | Customer | priya    | password   |
 | Customer | ananya   | password   |
 | Customer | riya     | password   |
+=======
+The app bootstraps the first admin account on first launch if the database is empty. Customers register themselves through the application.
+>>>>>>> Stashed changes
 
 ## Project Structure
 

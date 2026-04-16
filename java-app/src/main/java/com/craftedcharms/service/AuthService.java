@@ -109,6 +109,10 @@ public class AuthService {
     public User    getCurrentUser() { return currentUser; }
     public boolean isLoggedIn()     { return currentUser != null; }
     public boolean isAdmin()        { return currentUser != null && currentUser.getRole() == Role.ADMIN; }
+<<<<<<< Updated upstream
+=======
+    public boolean hasAnyUsers()    { return !userDAO.getAllUsers().isEmpty(); }
+>>>>>>> Stashed changes
 
     // ── Validation ────────────────────────────────────────────────────
 

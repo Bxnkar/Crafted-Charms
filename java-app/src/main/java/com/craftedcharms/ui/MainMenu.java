@@ -29,11 +29,42 @@ public class MainMenu {
     /** Start the application — runs until the user exits. */
     public void start() {
         printBanner();
+<<<<<<< Updated upstream
+=======
+        bootstrapInitialAdminIfNeeded();
+>>>>>>> Stashed changes
         mainLoop();
         DatabaseConnection.getInstance().close();
         sc.close();
     }
 
+<<<<<<< Updated upstream
+=======
+    private void bootstrapInitialAdminIfNeeded() {
+        if (authService.hasAnyUsers()) {
+            return;
+        }
+
+        ConsoleColors.header("INITIAL ADMIN SETUP");
+        ConsoleColors.info("No users exist yet. Create the first admin account now.");
+        try {
+            String fullName = InputValidator.readNonEmpty(sc, "  Full Name    : ");
+            String email    = InputValidator.readEmail(sc,    "  Email        : ");
+            String username = InputValidator.readNonEmpty(sc, "  Username     : ");
+            System.out.print("  Password      : ");
+            String password = sc.nextLine().trim();
+            if (password.length() < 8) {
+                ConsoleColors.error("Password must be at least 8 characters.");
+                return;
+            }
+            authService.registerAdmin(fullName, email, username, password);
+            ConsoleColors.success("Initial admin account created. You can now log in.");
+        } catch (Exception e) {
+            ConsoleColors.error("Initial admin setup failed: " + e.getMessage());
+        }
+    }
+
+>>>>>>> Stashed changes
     private void mainLoop() {
         while (true) {
             ConsoleColors.header("WELCOME  ·  CRAFTED CHARMS");

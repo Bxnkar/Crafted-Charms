@@ -10,5 +10,10 @@ db.url=jdbc:mysql://localhost:3306/crafted_charms?useSSL=false&serverTimezone=UT
 # MySQL username
 db.user=your_mysql_user
 
+<<<<<<< Updated upstream
 # MySQL password
 db.password=your_mysql_password
+=======
+# Database secret
+db.password=<your_database_secret>
+>>>>>>> Stashed changes

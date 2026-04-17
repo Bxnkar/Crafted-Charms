@@ -121,8 +121,3 @@ mvn exec:java
 | Frontend  | Vanilla HTML, CSS, JS     |
 | Fonts     | Cormorant Garamond + Inter|
 
----
-
-## 📄 License
-
-© 2024 Crafted Charms. All rights reserved.
